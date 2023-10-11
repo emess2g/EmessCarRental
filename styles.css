@@ -1,0 +1,1194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+}
+
+:root {
+    --color-primary: #1d9bf0;
+    --color-sec: #044484;
+    --color-white:#fff;
+    --color-black: #000;
+    --color-ash: #555;
+    --color-orangered: rgb(242, 75, 14);
+    --color-yellow: rgb(255, 252, 84);
+
+    --color-bg: #0084b4;
+    --color-bg1: rgb(245, 245, 245);
+    --color-bg2: hsla(48, 100%, 94%, 0.28);
+
+    --transition: all 400ms ease;
+
+
+}
+
+.row{
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 3rem ;
+    outline: none;
+}
+
+select{
+    background-color: var(--color-sec);
+    color: var(--color-white);
+    border: none;
+    font-size: 12px;
+}
+
+.country-parent-container{
+    background-color: var(--color-sec);
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 3rem;
+    align-items: center;
+   
+}
+
+.country-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang-currency-container{
+    display: flex;
+    justify-content: space-between;
+    gap: .2rem;
+    width:20%;
+}
+
+.flag{
+    width: 12%;
+}
+
+.us-flag{
+    width: 24%;
+}
+
+.lang-container,
+.currency-container{
+    display: flex;
+}
+
+.i-currency{
+    color: var(--color-white);
+    font-size: 18px;
+}
+
+       /* =========== end of countries, languages bar  */
+.content-container{
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    justify-content: space-between;
+}
+
+.logo-container{
+    width: 7%;
+}
+
+.logo{
+    padding-top: .3rem;
+    width: 100%;
+    transition: var(--transition);
+}   
+
+.logo:hover{
+    translate: 10%;
+}
+
+.menu-container{
+    display: flex;
+    font-size: 14px;
+}
+
+.menu{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu li a {
+    color: var(--color-black);
+}
+
+.menu li a:hover{
+    color: var(--color-primary);
+}
+
+.sub-menu-1{
+    display: none;
+
+}
+
+.sub-menu-1 li a{
+    color: var(--color-white); 
+    border-bottom:1px  solid var(--color-white);
+}
+
+.menu :hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    background-color: var(--color-primary);
+    padding: .5rem;
+    margin-top: .2rem;
+    margin-right: -15px;
+}
+
+.menu:hover .sub-menu-1 ul li {
+    width:100%;
+    padding: .3rem;
+}
+
+.menu:hover .sub-menu-1 ul li a:hover{
+   color: var(--color-black);
+}
+
+.login-container{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 1rem;
+}
+
+.nav-btn{
+    font-size: 14px;
+    padding: .5rem 1.2rem;
+    border: none;
+    border-radius: .1rem;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.nav-btn:hover{
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+       /* end of nav-bar styles */
+
+.header-container{
+    position: relative;
+    background-color: var(--color-bg1);
+
+}
+
+.header-parent-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.header-left-content-container{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.header-sub-title{
+    font-size: 16px;
+}
+
+.header-sub-title-span{
+    color: var(--color-bg);
+    font-size: 20px;
+    font-weight: 700;
+    border: 3px solid var(--color-orangered);
+    border-left: none;
+    border-top: none;
+    margin-left: -0.5rem;
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.header-title-container{
+    margin-top: 1rem;
+    width: 65%;
+}
+
+
+.header-content{
+ line-height: 1.5;
+ margin-top: 1rem;   
+ font-size: 14px;
+ color: var(--color-ash);
+}
+
+.header-download-app-container{
+    margin-top: 1rem;
+    display: flex;
+    gap: .5rem;
+    width: 25%;
+}
+
+.download-img{
+    width: 100%;
+}
+
+.download-img:hover{
+  cursor: pointer;
+}
+
+.header-right-container{
+    text-align: end;
+    width: 50%;
+}
+
+.header-img{
+    object-fit: cover;
+    width: 100%;
+}
+
+           /* end of header section */
+
+.search-container{
+    position: absolute;
+    z-index: 10;
+    left: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    top: 24rem;
+    right: 10rem;
+    width: 72%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    gap: .3rem;
+    align-items: center;
+    border-radius: .3rem;
+    background-color: var(--color-white);
+    box-shadow: 5px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-input{
+    display: flex;
+    gap: .5rem;
+    width: 15%;
+    margin-right:2rem;
+    padding-left: 1rem;
+    border-right: 1px  solid var(--color-ash);
+}
+
+.search-input i{
+    font-size: 18px;
+    color: var(--color-ash);
+}
+
+input[type=search]{
+    border: 1px  solid;
+    outline: none;
+    border: none;
+    font-size: 14px;    
+}
+
+.pickup-container{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-right: .5rem;
+    border-right: 1px solid var(--color-ash);
+}
+
+.pu-third{
+    border-right: none;
+}
+
+.pickup-container i{
+  color: var(--color-ash);
+}
+
+.pickup-container i:hover{
+   color: var(--color-primary);
+}
+
+.pickup-container p:first-child{
+    font-size: 14px;
+    color: var(--color-ash);
+}
+
+.pickup-container p:last-child{
+    font-size: 16px;
+    margin-top: .2rem;
+    font-weight: 550;
+}
+
+.search-box-container{
+    font-size: 16px;
+    color: var(--color-white);
+    padding: 1.5rem;
+    transition: 0.15s;
+    border-top-right-radius:.2rem ;
+    border-bottom-right-radius:.2rem ;
+    background-color: var(--color-primary);
+}
+
+.search-box-container:hover{
+    color: var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+                          /* end of search bar */
+
+.why-container{
+    position: relative;
+    padding-top: 8rem ;
+    padding-bottom: 2rem ;
+
+} 
+
+.why-title-container{
+    margin-bottom: 5rem;
+}
+
+.why-title{
+    font-size: 36px;
+}
+
+.why-title-span{
+ color:var(--color-orangered);
+}
+
+.stat-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-ash);
+    gap: 1rem;
+}
+
+hr{
+   border: 1.1px  solid var(--color-primary);
+   height: 3rem;
+   align-items: center;
+}
+
+.stat-row-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-num{
+    font-size: 44px;
+    color: var(--color-primary);
+}
+
+                       /* end of why us below are styles for find a car */
+
+.find-car-container{
+    padding: 3rem 0;
+    background-color: var(--color-bg1);
+    border-top: inset  1px solid  rgba(0, 0, 0, 0.1);
+}
+         
+.find-car-title-container{
+    margin-bottom: 3rem;
+}   
+         
+.city-menu{
+    display: inline-block;
+}         
+
+.select-city{
+    font-weight: 10;
+    color: var(--color-primary);
+}
+
+.cities-menu{
+    display: none;
+}
+
+.city-menu:hover .cities-menu{
+    position: absolute;
+    display: block;
+    z-index: 10;
+    background-color: var(--color-primary);
+    padding: .5rem;
+    margin-top: .2rem;
+    margin-right: -15px;
+    text-align: center;
+}
+
+.city-menu:hover .cities-menu  li a{
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-white);
+    font-size: 14px;
+}
+
+.city-menu:hover .cities-menu  li a:hover{
+    color: var(--color-black);
+}
+
+.find-car-card-parent-container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.find-car-card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+    padding-top: 1rem;
+    text-align:center;
+    width: 22%;
+}
+
+
+.find-car-img{
+    width: 95%;
+    background-color: var(--color-bg1);
+}
+
+.find-car-card-content-container{
+    font-size: 13px;
+
+}
+
+.find-car-card-content-container p{
+    font-size: 13px;
+    margin-top: .3rem;
+    color: var(--color-ash);
+}
+
+.see-more-cars-container{
+    display: none;
+}
+
+.see-more-container{
+   margin-top: 2rem;
+}
+
+.see-more-btn{
+    color: var(--color-primary);
+    border-radius: .2rem;
+    border: 1px  solid var(--color-primary);
+    padding: .6rem 2.5rem;
+    font-size: 14px;
+    transition: 0.15s;
+}
+
+.see-more-btn:hover{
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.see-more-btn:hover + .see-more-cars-container {
+    display: inline;
+    position: absolute;
+    z-index: 10;
+}
+
+                     /*  end of find car section below are styles booking section */
+.booking-container{
+    background-color: var(--color-bg2);
+    padding: 3rem 0;
+}
+
+.booking-parent-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: .5rem;
+} 
+
+.booking-content{
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: .5rem;
+}
+
+.filter-container{
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    gap: .8rem;
+}
+
+.price-box:hover i {
+    display: none;
+}
+
+.price-box{
+    border: 1px  solid gray;
+    border-radius: .2rem;
+    padding: .5rem 1rem;
+    text-align: start;
+    font-size: 14px;
+    color: var(--color-ash);
+    display: flex;
+    gap: .5rem;
+    
+}
+
+.price-box:hover .filter-menu{
+    display: block;
+    position: absolute;
+    margin-top: 1.4rem;
+    padding: .5rem;
+    background-color: var(--color-primary);
+}
+
+.price-box:hover .filter-menu a{
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-white);
+}
+
+.price-box:hover .filter-menu a:hover{
+    color: var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+}
+
+.price-box:hover .filter-menu li {
+    padding-bottom: .4rem;
+    color: var(--color-white);
+}
+
+.filter-menu{
+    display: none;
+}
+
+
+
+.rent-now-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.rent-now-card{
+  display: flex;
+  flex-direction: column;
+  border-radius: .2rem;
+  margin-top: 1.5rem;
+  background-color: var(--color-white);
+  box-shadow: 1px solid  rgba(0, 0, 0, 0.1);
+  text-align: start;
+  font-size: 16px;
+  width: 75%;
+  height: fit-content;
+  transition: 0.1s;
+}
+
+.rent-now-card:hover{
+      transform: scale(1.1);
+}
+
+.rent-now-content-container{
+    padding: .5rem 1rem;
+}
+
+.rn-card-title{
+    margin-bottom: 1.2rem;
+    color: var(--color-sec);
+}
+
+.rn-img{
+    width:90%;
+    margin-bottom: 1rem;
+}
+
+.price-tag{
+    margin-bottom: .3rem;
+    font-weight: 600;
+}
+
+.per-day-span{
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--color-ash);
+}
+
+.stars i {
+    font-size: 14px;
+    color:var(--color-yellow);
+}
+
+.stars{
+    font-size: 14px;
+    color: var(--color-black);
+    margin-bottom: .5rem;
+}
+
+.rn-card-icons-container{
+    display: flex;
+    text-align: center;
+    align-items: start;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--color-ash);
+    margin-top: .2rem;
+}
+
+.rn-card-icons-container i{
+    border: 1px  solid var(--color-primary);
+    padding:.3rem;
+    color: var(--color-white);
+    text-align: center;
+    border-radius: .1rem;
+    margin-bottom: .2rem;
+    background-color: var(--color-primary);
+}
+
+.rent-now-btn{
+    width: 100%;
+    text-align: center;
+    color: var(--color-white);
+    padding: .5rem 0;
+    border-bottom-right-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+    background-color: var(--color-primary);
+}
+
+
+               /* end of booking section */
+
+.discount-container{
+    margin: 3rem 0;
+}
+
+.discount-parent-container p{
+    font-size: 16px;
+    color: var(--color-bg1);
+    margin-bottom: .8rem;
+}
+
+.discount-title{
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.discount-btn{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 14px;
+    padding: .7rem 1.2rem;
+    border-radius: .1rem;
+    border: none;
+}
+
+.discount-btn:hover{
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.discount-title-span{
+    color:var(--color-orangered);
+   }
+
+.discount-parent-container{
+    background-image: url(./imgs/sports-car-races.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    padding: 4.5rem 2rem;
+    color: var(--color-white);
+}
+
+/* explore styles */
+
+.explore-parent-container{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.explore-img-container{
+    border-top: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-yellow);
+    display: flex;
+    padding: 2rem;
+    border-radius: 80%;
+    flex-direction: column;
+    width: 50%;
+}
+
+.explore-img{
+    border-top: 2px solid var(--color-orangered);
+    border-bottom: 2px solid var(--color-bg);
+    border-radius: 80%;
+    width: 100%;
+}
+
+.explore-content-container{
+    text-align: start;
+    width: 50%;
+}
+
+.explore-upper-content{
+    margin-bottom: 2rem;
+}
+
+.sub-title{
+    color: var(--color-sec);
+    font-size: 16px;
+    margin-bottom: .5rem;
+    font-weight: 550;
+}
+
+.explore-title{
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.explore-title-span {
+    color: var(--color-orangered);
+}
+
+.explore-content{
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--color-ash);
+
+}
+
+.explore-lower-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.services-container{
+    display: flex;
+    justify-content: space-between;
+    padding: .2rem;
+    width: 45%;
+}
+
+.service-parent-container{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-content: space-between;
+}
+
+.service-parent-container i{
+    padding: .4rem;
+    color: var(--color-white);
+    border-radius: .2rem;
+    background-color: var(--color-primary);
+    border: 1.5px solid var(--color-sec);
+}
+
+.service-title{
+    margin-bottom: .3rem;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.service-content{
+    color: var(--color-ash);
+    font-size: 12px;
+}
+
+.second-booking-upper{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: start;
+    gap: .5rem;
+}   
+
+.second-booking-upper p{
+    font-size: 14px;
+}
+
+/* end of promo discount section */
+
+.c-story-container{
+    padding: 3rem 0;
+    background-color: var(--color-bg1);
+}
+
+.c-story-upper-container{
+    text-align: center;
+}
+
+.c-story-title{
+    font-size: 26px;
+    margin-bottom: .5rem;
+}
+
+
+.c-story-content{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    color: var(--color-ash);
+}
+
+.c-span{
+    color: var(--color-primary);
+}
+
+.c-sub-title{
+    color: var(--color-ash);
+    display: inline-block;
+    font-size: 14px;
+}
+
+.c-story-card-container{
+    background-color: var(--color-white);
+    box-shadow: 1px solid  rgba(0, 0, 0, 0.2);
+    border-radius: .3rem;
+    padding: .8rem;
+    text-align: center;
+    width: 28%;
+    transition: 1s;
+    /* min-height: fit-content; */
+}
+
+.c-story-card-container:hover{
+    transform: scale(1.2)
+}
+
+.c-img{
+    width: 30%;
+    border-radius: 50%;
+    margin-bottom: .3rem;
+}
+
+.c-review{
+    color: var(--color-ash);
+    line-height: 1.3;
+    font-size: 13px;
+}
+
+
+.c-story-lower-container{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+}
+
+.c-story-card-container{
+    font-size: 16px;
+}
+
+                   /* end of costumer reviews*/
+.faqs-container{
+    padding: 3rem 0;
+}
+
+.faq-upper-container{
+    text-align: center;
+}    
+
+.faq-subtitle{
+    margin-top: .5rem;
+    font-size: 16px;
+    color: var(--color-ash);
+}
+
+.questions-parent-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+}
+
+.faq{
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    cursor: pointer;
+    border: 1px  solid var(--color-primary);
+    margin-top: 1rem;
+    width: 65%;
+}
+
+.faq h4{
+    font-size: 14px;  
+}
+
+.faq-icon{
+    border: 1px solid var(--color-primary);
+    border-radius: .3rem;
+    padding: .1rem .3rem;
+    font-size: 1rem;
+}
+
+.faq p{
+    font-size: 14px;
+    margin-top: .8rem;
+    display: none;
+
+}
+
+.faq.open p{
+    display: block;
+}
+
+              /* end of FAQs styles */
+
+.app-banner-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+    position: relative;
+}      
+
+.phone-app{
+    width: 45%;
+    height: 25rem;
+    left: 25rem;
+    right: 0;
+    position: absolute;
+}
+
+.app-banner-content{
+    padding: 4rem 5rem;
+    border-radius: .6rem;
+    background-color:var(--color-primary) ;
+    width: 100%;
+}
+
+.app-banner-content h2{
+    color: var(--color-white);
+}
+
+.app-banner-content p{
+    margin: .5rem 0;
+    font-size: 16px;
+    color: var(--color-white);
+}
+
+.app-banner-content img{
+  width: 60%;
+}
+
+
+/* footer */
+
+.footer-container{
+    padding: 2rem 0;
+    list-style: none;
+    color: var(--color-white);
+    background-color:var(--color-sec);
+}
+
+
+
+.footer-parent-container{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.2;
+}
+
+.footer-parent-container h3{
+    font-size: 14px;
+}
+
+.footer-address{
+    color: var(--color-white);
+    font-style: italic;
+    margin-bottom: .5rem;
+    font-size: 18px;
+}
+
+.footer-contact p{
+    margin-top: .8rem;
+    display: inline-block;
+}
+
+.footer-address p {
+    display: inline-block;
+}
+
+.footer-parent-container a{
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--color-white);
+}
+
+.footer-parent-container  a:hover{
+     color:var(--color-primary);
+     text-decoration: underline;
+}
+
+.footer-title{
+    margin-bottom: 1rem;
+}
+
+.footer-icons-container{
+    font-size: 1.8rem;
+    border-radius: 50%;
+    color: var(--color-white);
+}
+
+.parent-signup-con p{
+  margin-top: .8rem;
+  font-size: 13px;
+  color: var(--color-white);
+}
+
+.footer-signup-container{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    height: 2rem;
+    box-shadow: 1px solid  rgba(0, 0, 0, 0.1);
+}
+
+.footer-input{
+    padding: .5rem ;
+    font-size: 14px;
+    border-right: none;
+    border: none;
+}
+
+input[type=text]{
+    border: none;
+    outline: none;
+}
+
+.footer-btn{
+    cursor: pointer;
+    background-color: var(--color-primary);
+    padding: .5rem .5rem;
+    color: #fff;
+    border: none;
+   
+}
+
+.copyright-p {
+    text-align: center;
+    color: var(--color-white);
+    font-size: 14px;
+    margin-top: 3rem;
+    padding-top: .5rem;
+    border-top: 1px solid #dedede;
+}
+
+
+  /* Responsive Styles */
+
+
+  @media only screen and (max-width: 561){
+    /* .row{
+        margin: 0 auto;
+        max-width: 1100px;
+        padding: 0 3rem ;
+        outline: none;
+    } */
+
+
+    .content-container{
+        display: flex;
+        align-items: center;
+        padding: .5rem;
+        justify-content: center;
+    }
+    
+    .logo-container{
+        width: 7%;
+    }
+    
+    /* .logo{
+        padding-top: .3rem;
+        width: 100%;
+        transition: var(--transition);
+    }   
+     */
+    .logo:hover{
+        translate: 10%;
+    }
+    
+    .menu-container{
+        display: flex;
+        font-size: 12px;
+    }
+    
+    .menu{
+        display: flex;
+        gap: 1.5rem;
+    }
+    
+    .menu li a {
+        color: var(--color-black);
+    }
+    
+    .menu li a:hover{
+        color: var(--color-primary);
+    }
+    
+    .sub-menu-1{
+        display: none;
+    
+    }
+    
+    .sub-menu-1 li a{
+        color: var(--color-white); 
+        border-bottom:1px  solid var(--color-white);
+    }
+    
+    .menu :hover .sub-menu-1 {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        background-color: var(--color-primary);
+        padding: .5rem;
+        margin-top: .2rem;
+        margin-right: -15px;
+    }
+    
+    .menu:hover .sub-menu-1 ul li {
+        width:100%;
+        padding: .3rem;
+    }
+    
+    .menu:hover .sub-menu-1 ul li a:hover{
+       color: var(--color-black);
+    }
+    
+    .login-container{
+        /* display: flex; */
+        align-items: center;
+        font-size: 12px;
+        /* gap: 1rem; */
+    }
+    
+    .nav-btn{
+        font-size: 14px;
+        padding: .5rem 1.2rem;
+        border: none;
+        border-radius: .1rem;
+        color: var(--color-white);
+        background-color: var(--color-primary);
+    }
+    
+    .nav-btn:hover{
+        color: var(--color-primary);
+        border: 1px solid var(--color-primary);
+        background-color: var(--color-white);
+        cursor: pointer;
+    }
+  }
+  
