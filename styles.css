@@ -83,6 +83,7 @@ select{
 }
 
        /* =========== end of countries, languages bar  */
+
 .content-container{
     display: flex;
     align-items: center;
@@ -92,6 +93,10 @@ select{
 
 .logo-container{
     width: 7%;
+}
+
+.content-container .bars{
+    display: none;
 }
 
 .logo{
@@ -257,7 +262,7 @@ select{
     left: 10rem;
     margin-left: auto;
     margin-right: auto;
-    top: 24rem;
+    top: 31rem;
     right: 10rem;
     width: 72%;
     border: none;
@@ -698,7 +703,7 @@ hr{
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 1rem;
-    padding: 4.5rem 2rem;
+    padding: 5rem 2rem;
     color: var(--color-white);
 }
 
@@ -956,15 +961,15 @@ hr{
 }      
 
 .phone-app{
-    width: 45%;
+    width: 33%;
     height: 25rem;
-    left: 25rem;
+    left: 40rem;
     right: 0;
     position: absolute;
 }
 
 .app-banner-content{
-    padding: 4rem 5rem;
+    padding: 5rem 5rem;
     border-radius: .6rem;
     background-color:var(--color-primary) ;
     width: 100%;
@@ -1088,51 +1093,86 @@ input[type=text]{
 }
 
 
-  /* Responsive Styles */
+                /* Responsive Styles */
 
 
-  @media only screen and (max-width: 561){
-    /* .row{
+  @media only screen and (max-width: 561px){
+    .row{
         margin: 0 auto;
-        max-width: 1100px;
-        padding: 0 3rem ;
+        max-width: 900px;
+        padding: 0 .5rem ;
         outline: none;
-    } */
+    }
+
+    
+select{
+    background-color: var(--color-sec);
+    color: var(--color-white);
+    border: none;
+    font-size: 12px;
+}
+
+.country-parent-container{
+    background-color: var(--color-sec);
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem 1rem;
+    align-items: center;
+   
+}
+
+.country-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.currency-container{
+    display: none;
+}
+
+
+
+/* end of toolbar */
 
 
     .content-container{
         display: flex;
         align-items: center;
-        padding: .5rem;
-        justify-content: center;
+        padding: .8rem;
+        justify-content: space-between;
     }
+
     
     .logo-container{
+        
         width: 7%;
     }
-    
-    /* .logo{
-        padding-top: .3rem;
-        width: 100%;
-        transition: var(--transition);
-    }   
-     */
-    .logo:hover{
-        translate: 10%;
+
+
+    .bars{
+        display: block;
+        cursor: pointer;
     }
     
+ 
     .menu-container{
         display: flex;
-        font-size: 12px;
+        font-size: 10px;
     }
     
+
+
+
     .menu{
         display: flex;
-        gap: 1.5rem;
+        gap: .7rem;
     }
-    
+
     .menu li a {
         color: var(--color-black);
+        font-size: 10px;
     }
     
     .menu li a:hover{
@@ -1144,51 +1184,366 @@ input[type=text]{
     
     }
     
-    .sub-menu-1 li a{
-        color: var(--color-white); 
-        border-bottom:1px  solid var(--color-white);
-    }
-    
-    .menu :hover .sub-menu-1 {
-        display: block;
-        position: absolute;
-        z-index: 10;
-        background-color: var(--color-primary);
-        padding: .5rem;
-        margin-top: .2rem;
-        margin-right: -15px;
-    }
-    
-    .menu:hover .sub-menu-1 ul li {
-        width:100%;
-        padding: .3rem;
-    }
-    
-    .menu:hover .sub-menu-1 ul li a:hover{
-       color: var(--color-black);
-    }
-    
+
     .login-container{
-        /* display: flex; */
-        align-items: center;
-        font-size: 12px;
-        /* gap: 1rem; */
+        font-size: 10px;
+        gap: .5rem;
+    }
+
+    .navbtn-arr{
+        display: none;
     }
     
     .nav-btn{
-        font-size: 14px;
-        padding: .5rem 1.2rem;
-        border: none;
-        border-radius: .1rem;
-        color: var(--color-white);
-        background-color: var(--color-primary);
+        font-size: 10px;
+        padding: .3rem 1rem;
     }
     
-    .nav-btn:hover{
-        color: var(--color-primary);
-        border: 1px solid var(--color-primary);
-        background-color: var(--color-white);
-        cursor: pointer;
+/* end of navbar */
+
+
+    .header-container{
+        padding: 1rem 0;   
     }
+    
+    .header-parent-container{
+        padding-left: 1rem;
+    }
+    
+    .header-left-content-container{
+        width: 40%;
+    }
+    
+    .header-sub-title{
+        font-size: 14px;
+    }
+    
+  
+    .header-title-container{
+        margin-top: 1rem;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    
+    .header-content{ 
+     font-size: 10px;
+    }
+    
+    .header-download-app-container{
+        width: 38%;
+    }
+    
+   
+               /* end of header section */
+    
+    .search-container{
+        left: 0;
+        top: 23rem;
+        right:0;
+        width: 85%;
+        gap: 0;
+    }
+    
+    .search-input{
+        width:10%;
+        margin-right:4rem;
+        padding-left: .5rem;
+    }
+    
+    .search-input i{
+        font-size: 12px;
+    }
+    
+    input[type=search]{
+        font-size: 10px;    
+    }
+    
+    .pickup-container{
+         gap: .5rem;
+         padding-right: 0;
+    }
+    
+ 
+    .pickup-container p:first-child{
+        font-size: 12px;
+    }
+    
+    .pickup-container p:last-child{
+        font-size: 10px;
+        margin-top: .2rem;
+        font-weight: 550;
+    }
+    
+
+    .search-box-container{
+        font-size: 10px;
+       }
+    
+    
+                              /* end of search bar */
+    
+
+   
+    .why-title{
+        font-size: 30px;
+    }
+    
+
+    .stat-container{
+        gap: 0.5rem;
+    }
+    
+    
+    .stat-row-container{  
+        align-items: center;
+        gap: .5rem;
+    }
+    
+    .stat-num{
+        font-size: 24px;
+    }
+
+
+    
+                           /* end of why us below are styles for find a car */
+    
+
+    
+    .find-car-card-parent-container{
+        gap: .8rem;
+    }
+    
+    .find-car-card-container{
+        width: 22%;
+    }
+    
+    
+    .find-car-img{
+        width: 100%;
+        background-color: var(--color-bg1);
+    }
+    
+    .find-car-card-content-container{
+        font-size: 10px;
+    
+    }
+    
+    .find-car-card-content-container p{
+        font-size: 12px;
+    }
+
+
+    
+                         /*  end of find car section below are styles booking section */
+
+    .booking-parent-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: .5rem;
+    } 
+    
+    .booking-content{
+        font-size: 14px;
+        line-height: 2;
+        margin-bottom: .5rem;
+    }
+    
+    .filter-container{
+        gap: .5rem;
+    }
+    
+    .price-box:hover i {
+        display: none;
+    }
+    
+    .price-box{
+        padding: .2rem .3rem;
+        font-size: 12px;    
+    }
+    
+   
+    
+    .rent-now-container{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .rent-now-card{
+      font-size: 12px;
+      width: 40%;
+
+    }
+    
+
+    
+                   /* end of booking section */
+    
+   
+    .discount-parent-container p{
+        font-size: 16px;
+        color: var(--color-bg1);
+        margin-bottom: .8rem;
+    }
+    
+    .discount-title{
+      font-size: 26px;
+    }
+    
+    .discount-btn{
+        font-size: 12px;
+    }
+
+    
+    .discount-parent-container{
+        padding: 3.5rem 2rem;
+    }
+    
+    /* explore styles */
+    
+    .explore-parent-container{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        gap: 5rem;
+    }
+    
+    .explore-img-container{
+        margin-bottom: 3rem;
+        width: 70%;
+    }
+    
+    
+    .explore-content-container{
+        text-align: center;
+        width: 90%;
+    }
+    
+   
+    /* end of promo discount section */
+
+
+    
+    .c-story-title{
+        font-size: 24px;
+    }
+    
+    
+    .c-story-content{
+        font-size: 12px;
+    }
+    
+    .c-sub-title{
+        font-size: 12px;
+    }
+    
+    .c-story-card-container{
+        padding: .5rem;
+        width: 30%;
+        transition: 0.4s;
+        min-height: fit-content;
+    }
+
+    .c-img{
+        width: 50%;
+    }
+    
+    .c-review{
+        font-size: 10px;
+    }
+     
+    .c-story-card-container{
+        font-size: 10px;
+    }
+    
+                       /* end of costumer reviews*/
+
+
+    .faq-upper-container{
+        text-align: center;
+    }    
+    
+    .faq-subtitle{
+        font-size: 14px;
+    }
+    
+    .questions-parent-container{
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+    }
+    
+    .faq{
+        gap: 1rem;
+        width: 85%;
+    }
+    
+    .faq h4{
+        font-size: 13px;  
+    }
+    
+ 
+    .faq p{
+        font-size: 12px;
+    }
+    
+    .faq.open p{
+        display: block;
+    }
+    
+                  /* end of FAQs styles */
+    
+    .app-banner-container{
+        margin-bottom: 3rem;
+    }      
+    
+    .phone-app{
+        width: 39%;
+        height: 16rem;
+        left: 21rem;
+    }
+    
+    .app-banner-content{
+        padding: 2rem;
+        border-radius: .9rem;
+    }
+
+    
+    .app-banner-content p{
+        font-size: 12px;
+    }
+    
+
+
+    /* footer */
+    
+
+    .footer-parent-container h3{
+        font-size: 10px;
+    }
+    
+    .footer-parent-container a{
+        font-size: 10px;
+    }
+        
+    .footer-icons-container{
+        font-size: 1.2rem;
+    }
+    
+    .parent-signup-con p{
+      font-size: 10px;
+    }
+
+    .footer-input{
+        padding: .3rem ;
+        font-size: 10px;
+    }
+     
+    .copyright-p {
+        font-size: 12px;
+        margin-top: 2rem;
+        padding-top: .8rem;
+    }
+    
   }
   

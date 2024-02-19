@@ -17,3 +17,15 @@ faq.forEach(faq => {
 })
 
 
+const toggleNav = () => {
+     const barIcon = document.getElementsByClassName('.mobileNav');
+
+     if(barIcon.style.display === "block"){
+        barIcon.style.display === "none";
+     }else{
+        barIcon.style.display === "block";
+     }
+
+
+}
+
